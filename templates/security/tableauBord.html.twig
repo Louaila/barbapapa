@@ -47,30 +47,27 @@
         </div>
         <div id="modifUser">
             <div id="formUser">
-            {% if app.user %}
-                <div class="mb-3">
-                    <div class="mb-2">
-                    Bonjour
-                    {{ app.user.nameUser }}
-                    </div>
-                    <div>
-                        <a href="{{ path('app_logout') }}">Déconnexion</a>
-                    </div>
-                </div>
-                {% endif  %}
-                <h1 class="h1Titre">Mon profil :</h1>
+            <br>
+                    {% if app.user %}
+                        <div id="salutUser">
+                        Bonjour
+                        {{ app.user.nameUser }}
+                        </div>
+                    {% endif  %}
                 {{ form_errors(updateForm)}}
                 {{ form_start(updateForm)}}
-                {{ form_row(updateForm.mailUser,{'attr': {'placeholder': 'Mail', 'class': 'modifRowUser'}})}}
-                <br>
-                {{ form_row(updateForm.lastnameUser,{'attr': {'placeholder': 'Nom de famille', 'class': 'modifRowUser'}})}}
-                <br>
-                {{ form_row(updateForm.nameUser,{'attr': {'placeholder': 'Prénom', 'class': 'modifRowUser'}})}}
-                <br>
-                {{ form_row(updateForm.nName,{'attr': {'placeholder': 'Surnom', 'class': 'modifRowUser'}})}}
-                <!-- Add other form fields as needed -->
-                <button type="submit" class="btn">Mettre à jour</button>
-                <br>
+                    {{ form_row(updateForm.mailUser,{'attr': {'placeholder': 'Mail', 'class': 'modifRowUser'}})}}
+                    <br>
+                    {{ form_row(updateForm.lastnameUser,{'attr': {'placeholder': 'Nom de famille', 'class': 'modifRowUser'}})}}
+                    <br>
+                    {{ form_row(updateForm.nameUser,{'attr': {'placeholder': 'Prénom', 'class': 'modifRowUser'}})}}
+                    <br>
+                    {{ form_row(updateForm.nName,{'attr': {'placeholder': 'Surnom', 'class': 'modifRowUser'}})}}
+                    <!-- Add other form fields as needed -->
+                    <button type="submit" class="btn">Mettre à jour</button>
+                    <div>
+                        <button class="btn"><a href="{{ path('app_logout') }}">Déconnexion</a></button>
+                    </div>
                 {{ form_end(updateForm)}}
                 {# Bouton de suppression de compte #}
                 <form action="{{ path('app_deleteUser', {id: app.user.id}) }}" method="post" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer votre compte ?');">

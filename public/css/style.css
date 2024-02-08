@@ -1082,15 +1082,9 @@ justify-content: center;
 
 /************************************************FIN INSCRIPTION***************************************************************************/
 
-/******************************************** TABLEAU DE BORD *****************************************************************************/
+/* TABLEAU DE BORD  */
 #mainTdeBord{
     display: flex;
-}
-#mainTdeBord .h1Titre {
-    color: #4B570D;
-    margin-top: 50px;
- margin-bottom: 50px;
-    font-size: 60px;
 }
 /************************************DEBUT MODIF IMGNOM USER**************************************/
 #imgNomUser{
@@ -1112,6 +1106,9 @@ justify-content: center;
     padding: 5px;
     font-family: ralewayBold;
 
+}
+#mainTdeBord a{
+    color: #FFF3E6;
 }
 /************************************FIN MODIF IMGNOM USER**************************************/
 /************************************DEBUT MODIF RANDO USER **************************************/
@@ -1236,6 +1233,17 @@ justify-content: center;
 }
 #formUser label {
     display: none;
+}
+#modifUser .h1Titre {
+    color: #683614;
+    margin-top: 50px;
+ margin-bottom: 50px;
+    font-size: 60px;
+    font-family: yesevaOne;  
+}
+#modifUser #salutUser {
+    font-size: 30px;
+    font-family: yesevaOne;
 }
 /************************************FIN MODIF PROFIL USER**************************************/
 /*******************************************************Début OBJECTIF***************************************************/
