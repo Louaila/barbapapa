@@ -1,7 +1,5 @@
 /*We remove the default margins and padding to define the size of each element ourselves.*/
 *{ 
-    margin:0;
-    padding:0;
     font-weight: normal;
     box-sizing: border-box;
 }
@@ -883,7 +881,6 @@ margin: 0 auto;
 #mainConnexion figure{
 width: 50%;
 display: flex;
-#container
 padding: 0 35 px;
 }
 /*img barbapapa connexion*/
@@ -923,8 +920,8 @@ padding: 0 35 px;
     background-color: #FFF3E6 ;
     box-sizing: border-box;
     
-    }
-    #formConnexion input {
+}
+#formConnexion input {
         border: 2px #C68D5E solid;
         border-radius: 10px;
         background-color: #FFF3E6;
@@ -1002,16 +999,18 @@ hr {
 /********************************************Inscription*********************************************/
 #mainInscription {
     display: flex;
+    text-align: center;
+    justify-content: center;
 }
 /*container de la figure*/
-#mainInscription figure{
+#mainInscription #imgInscription{
 width: 50%;
-display: flex;
-justify-content: center;
- }
+}
+
+
 /*img barbapapa connexion*/
-#mainInscription .imgConnex{
-    max-width: 100%;
+#mainInscription img{
+    max-width: 90%;
  }
 /*container général*/
 #containerInscription {
@@ -1019,10 +1018,11 @@ justify-content: center;
 }
 /*div du formulaire Inscription*/
 #Inscription {
-    width: 120%;
-    text-align: center;
-    margin-left: 10%;
+    width: 100%;
+   
 }
+
+
 /*Centrer le titre et lui donner couleur*/
 #mainInscription .h1Titre {
     color: #4B570D;
@@ -1030,6 +1030,8 @@ justify-content: center;
     margin-bottom: 50px;
     padding-top: 50px;
     font-size: 60px;
+    font-family: yesevaOne;  
+
 }
 /* Inputs du formulaire Inscription*/
 #formInsc input {
@@ -1044,9 +1046,6 @@ justify-content: center;
 }
 
 #formInsc label {
-/*    color: #683614;
-    font-size: 14px;
-    display: block;*/
     display: none;
 }
 
@@ -1076,8 +1075,10 @@ justify-content: center;
     border-radius: 10px;
     cursor: pointer;
     font-size: 14px;
-    width: 15%;
+  
 }
+
+
 /* Ajoutez ces styles pour styliser le bouton s'inscrire*/
 #btnsInscrire:hover{
     background-color: #FF5C24;
@@ -1340,12 +1341,19 @@ GUIDE */
 
 @media screen and (max-width: 600px) {
     footer section div {
+        justify-content: center; 
         text-align: center; 
+       
+    
+    }
+
+    footer{
+     display: flex;    
     }
     
     footer section {
         flex-direction: column; 
-        text-align: center; 
+    
     }
     
     #mainConnexion .h1Titre {
@@ -1357,9 +1365,8 @@ GUIDE */
 
     }
     #mainConnexion figure{
-        width: 0%;
-        display: flex;
-        padding: 0 35 px;
+        display: none;
+    
     }
         
     #container {
@@ -1373,8 +1380,31 @@ GUIDE */
    footer{
    
     margin-top: 20px;
-    
+    }
 }
+
+
+
+@media screen and (max-width:600px){
+      #imgInscription{
+        display: none;
+       
+     }
+
+     #mainInscription{
+     display: flex;
+        
+    }
+        
+    #containerInscription {
+        width: 100%; 
+        justify-content: center;
+    
+    }
+
+    #mainInscription .h1Titre {
+        font-size: 30px;
+}   
 }
 
 
