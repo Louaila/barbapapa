@@ -18,7 +18,6 @@ class TableauBordType extends AbstractType
             ->add('lastnameUser')
             ->add('nameUser')
             ->add('nName')
-            ->add('birthUser')
         ;
     }
 
