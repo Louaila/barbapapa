@@ -883,9 +883,8 @@ margin: 0 auto;
 #mainConnexion figure{
 width: 50%;
 display: flex;
-#container
 padding: 0 35 px;
-}
+} 
 /*img barbapapa connexion*/
 #mainConnexion .imgConnex{
     max-width: 90%;
@@ -924,7 +923,7 @@ padding: 0 35 px;
     box-sizing: border-box;
     
     }
-    #formConnexion input {
+#formConnexion input {
         border: 2px #C68D5E solid;
         border-radius: 10px;
         background-color: #FFF3E6;
@@ -1008,10 +1007,11 @@ hr {
 width: 50%;
 display: flex;
 justify-content: center;
+
  }
 /*img barbapapa connexion*/
 #mainInscription .imgConnex{
-    max-width: 100%;
+    max-width: 90%;
  }
 /*container général*/
 #containerInscription {
