@@ -47,6 +47,17 @@
         </div>
         <div id="modifUser">
             <div id="formUser">
+            {% if app.user %}
+                <div class="mb-3">
+                    <div class="mb-2">
+                    Bonjour
+                    {{ app.user.nameUser }}
+                    </div>
+                    <div>
+                        <a href="{{ path('app_logout') }}">Déconnexion</a>
+                    </div>
+                </div>
+                {% endif  %}
                 <h1 class="h1Titre">Mon profil :</h1>
                 {{ form_errors(updateForm)}}
                 {{ form_start(updateForm)}}
