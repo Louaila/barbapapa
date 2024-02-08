@@ -1366,9 +1366,6 @@ GUIDE */
          align-items: center;
         width: 100%; 
     }
-    nav{
-      display: none; 
-   }
 
    footer{
    
@@ -1377,4 +1374,72 @@ GUIDE */
 }
 }
 
+/*************************************************MEDIA QUERY INDEX******************************************/
+@media screen and (max-width : 760px ){
+    body {
+    }
+}
 
+@media screen and (max-width : 600px ){
+    header nav ul li{
+        display: none;
+    }
+    header nav ul li:nth-of-type(5){
+        display: block;
+    }
+
+    #mainIndex section:nth-of-type(1) {
+        display: flex;
+        align-items: center;
+    }
+
+    #mainIndex section:nth-of-type(1) div img {
+        display:none;
+    }
+
+    .soeureinement::first-line {
+        font-size : 30px;
+    }
+    #mainIndex section:nth-of-type(2) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #mainIndex section:nth-of-type(2) img {
+        display: none;
+    }
+    #mainIndex section:nth-of-type(3) {
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #mainIndex section:nth-of-type(3) img {
+
+        display: none;
+    }
+    #mainIndex .firstLineTitle{
+        font-size: 30px;
+    
+    }  
+    #mainIndex .secondLineTitle{
+        font-size: 30px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    .texte p{
+        font-size: 12px;
+    }
+    #mainIndex .focus{
+        display: none;
+    }
+}
+
+
+/*************************************************MEDIA QUERY INDEX******************************************/
