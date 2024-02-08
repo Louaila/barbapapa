@@ -84,7 +84,7 @@ class UserController extends AbstractController
         $entityManager->flush();
 
         // Rediriger vers une page de confirmation ou ailleurs
-        return $this->redirectToRoute('app_login');
+        return $this->redirectToRoute('app_index');
     }
 
 
@@ -92,10 +92,10 @@ class UserController extends AbstractController
     public function logout(): void
     {
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
-        
-        
+
+
     }
-    
+
 }
 
 
