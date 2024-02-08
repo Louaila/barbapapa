@@ -760,9 +760,6 @@ margin: 0 auto;
 } 
  
 /*************************************** END CONSEILS *************************************************************/
-
-
-
 /* CATA RANDO  */
 
 
@@ -1111,6 +1108,9 @@ justify-content: center;
     font-family: ralewayBold;
 
 }
+#mainTdeBord a{
+    color: #FFF3E6;
+}
 /************************************FIN MODIF IMGNOM USER**************************************/
 /************************************DEBUT MODIF RANDO USER **************************************/
 #infoUser{
@@ -1188,7 +1188,8 @@ justify-content: center;
    margin-top: 15px;
 }
 /************************************FIN MODIF PASTRANDO**************************************/
-input[type=text] {
+/************************************DEBUT MODIF PROFIL USER**************************************/
+.modifRowUser {
     padding: 12px 20px;
     display: inline-block;
     background-color: #FFF7EE;
@@ -1199,16 +1200,6 @@ input[type=text] {
     font-family: "ralewayThin";
     font-size: 16px;
     outline: none;
-}
-.ajoutObj{
-border-radius: 20px;
-background-color: #FFF7EE;
-}
-.ajoutObj button{
-    background-color: #FFF7EE;
-    font-size: 30px;
-    cursor: pointer;
-    text-decoration: none;
 }
 #modifUser input[type=submit]{
  background-color: #C68D5E;
@@ -1226,6 +1217,47 @@ background-color: #FFF7EE;
     border-radius: 20px;
     border: 1px solid #683614;
 }
+#modifUser .btn {
+    background-color: #C68D5E;
+    color: #FFF3E6;
+    padding: 10px 20px;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+#modifUser .btn:hover{
+    background-color:#683614;
+}
+#formUser label {
+    display: none;
+}
+#modifUser .h1Titre {
+    color: #683614;
+    margin-top: 50px;
+ margin-bottom: 50px;
+    font-size: 60px;
+    font-family: yesevaOne;  
+}
+#modifUser #salutUser {
+    font-size: 30px;
+    font-family: yesevaOne;
+}
+/************************************FIN MODIF PROFIL USER**************************************/
+/*******************************************************Début OBJECTIF***************************************************/
+.ajoutObj{
+    border-radius: 20px;
+    background-color: #FFF7EE;
+}
+.ajoutObj button{
+    background-color: #FFF7EE;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
 #Objectifs{
     display: none;
 }
@@ -1241,12 +1273,12 @@ background-color: #FFF7EE;
     margin-top: 20px;
     background-color: #FFF3E6;
     border-radius: 20px;
-  
+      
 }
-
+/***********************************************************Fin OBJECTIF***************************************************/
 /* 
 GUIDE */
-/************************************DEBUT MODIF IMGNOM USER*****************************************************/
+/*************************************************DEBUT MODIF IMGNOM USER*****************************************************/
 #imgNomUserGuide{
     
     width: 20%;
