@@ -1086,9 +1086,15 @@ justify-content: center;
 
 /************************************************FIN INSCRIPTION***************************************************************************/
 
-/* TABLEAU DE BORD  */
+/******************************************** TABLEAU DE BORD *****************************************************************************/
 #mainTdeBord{
     display: flex;
+}
+#mainTdeBord .h1Titre {
+    color: #4B570D;
+    margin-top: 50px;
+ margin-bottom: 50px;
+    font-size: 60px;
 }
 /************************************DEBUT MODIF IMGNOM USER**************************************/
 #imgNomUser{
