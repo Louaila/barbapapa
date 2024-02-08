@@ -1,7 +1,5 @@
 /*We remove the default margins and padding to define the size of each element ourselves.*/
 *{ 
-    margin:0;
-    padding:0;
     font-weight: normal;
     box-sizing: border-box;
 }
@@ -919,7 +917,7 @@ padding: 0 35 px;
     background-color: #FFF3E6 ;
     box-sizing: border-box;
     
-    }
+}
 #formConnexion input {
         border: 2px #C68D5E solid;
         border-radius: 10px;
@@ -998,16 +996,17 @@ hr {
 /********************************************Inscription*********************************************/
 #mainInscription {
     display: flex;
+    text-align: center;
+    justify-content: center;
 }
 /*container de la figure*/
-#mainInscription figure{
+#mainInscription #imgInscription{
 width: 50%;
-display: flex;
-justify-content: center;
+}
 
- }
+
 /*img barbapapa connexion*/
-#mainInscription .imgConnex{
+#mainInscription img{
     max-width: 90%;
  }
 /*container général*/
@@ -1016,10 +1015,11 @@ justify-content: center;
 }
 /*div du formulaire Inscription*/
 #Inscription {
-    width: 120%;
-    text-align: center;
-    margin-left: 10%;
+    width: 100%;
+   
 }
+
+
 /*Centrer le titre et lui donner couleur*/
 #mainInscription .h1Titre {
     color: #4B570D;
@@ -1027,6 +1027,8 @@ justify-content: center;
     margin-bottom: 50px;
     padding-top: 50px;
     font-size: 60px;
+    font-family: yesevaOne;  
+
 }
 /* Inputs du formulaire Inscription*/
 #formInsc input {
@@ -1041,9 +1043,6 @@ justify-content: center;
 }
 
 #formInsc label {
-/*    color: #683614;
-    font-size: 14px;
-    display: block;*/
     display: none;
 }
 
@@ -1073,8 +1072,10 @@ justify-content: center;
     border-radius: 10px;
     cursor: pointer;
     font-size: 14px;
-    width: 15%;
+  
 }
+
+
 /* Ajoutez ces styles pour styliser le bouton s'inscrire*/
 #btnsInscrire:hover{
     background-color: #FF5C24;
@@ -1372,12 +1373,19 @@ GUIDE */
 
 @media screen and (max-width: 600px) {
     footer section div {
+        justify-content: center; 
         text-align: center; 
+       
+    
+    }
+
+    footer{
+     display: flex;    
     }
     
     footer section {
         flex-direction: column; 
-        text-align: center; 
+    
     }
     
     #mainConnexion .h1Titre {
@@ -1389,9 +1397,8 @@ GUIDE */
 
     }
     #mainConnexion figure{
-        width: 0%;
-        display: flex;
-        padding: 0 35 px;
+        display: none;
+    
     }
         
     #container {
@@ -1402,76 +1409,31 @@ GUIDE */
    footer{
    
     margin-top: 20px;
-    
-}
-}
-
-/*************************************************MEDIA QUERY INDEX******************************************/
-@media screen and (max-width : 760px ){
-    body {
     }
 }
 
-@media screen and (max-width : 600px ){
-    header nav ul li{
+
+
+@media screen and (max-width:600px){
+      #imgInscription{
         display: none;
-    }
-    header nav ul li:nth-of-type(5){
-        display: block;
-    }
+       
+     }
 
-    #mainIndex section:nth-of-type(1) {
-        display: flex;
-        align-items: center;
+     #mainInscription{
+     display: flex;
+        
     }
-
-    #mainIndex section:nth-of-type(1) div img {
-        display:none;
-    }
-
-    .soeureinement::first-line {
-        font-size : 30px;
-    }
-    #mainIndex section:nth-of-type(2) {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        display: flex;
+        
+    #containerInscription {
+        width: 100%; 
         justify-content: center;
-        align-items: center;
-    }
-    #mainIndex section:nth-of-type(2) img {
-        display: none;
-    }
-    #mainIndex section:nth-of-type(3) {
-        margin-top: 20px;
-        margin-right: 10px;
-        margin-left: 10px;
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #mainIndex section:nth-of-type(3) img {
-
-        display: none;
-    }
-    #mainIndex .firstLineTitle{
-        font-size: 30px;
     
-    }  
-    #mainIndex .secondLineTitle{
+    }
+
+    #mainInscription .h1Titre {
         font-size: 30px;
-    }
-    h4 {
-        font-size: 18px;
-    }
-    .texte p{
-        font-size: 12px;
-    }
-    #mainIndex .focus{
-        display: none;
-    }
+}   
 }
 
 
-/*************************************************MEDIA QUERY INDEX******************************************/
