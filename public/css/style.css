@@ -1359,6 +1359,45 @@ GUIDE */
 #mainGuide #mesButtonGuide button:hover{
     background-color: #FF5C24;
 }
+/*******************************************Début mentions légales***************************************************/
+/*********Titre de la page******************/
+#mainMentions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("/img/barbapapaadmin.png");
+    background-size:contain; /*prend la taille de conteneur */
+    background-position: right;
+    background-repeat: no-repeat;
+   
+}
+#mainMentions .firstLineTitle{
+    color: #c68d5e;
+    font-size: 50px;
+    text-align: center;
+    text-indent: -10%;
+    
+}  
+#mainMentions .secondLineTitle{
+    color: #4b570d;
+    margin-bottom: 5px;
+    padding: 20px;
+    font-size: 60px;
+    text-align: center;
+}
+.scroll-section {
+    max-height: 70vh;
+    overflow-y: scroll;
+    text-align: justify;
+    padding: 20px;
+    margin:5%;
+}
+.gros-paragraphe {
+    font-size: 18px; /* Ajustez la taille de police selon vos besoins */
+    line-height: 1.52; /* Utilisez un nombre pour le multiple de la taille de police */
+    /* Ou utilisez une valeur fixe comme line-height: 24px; */
+}
 
 
 
