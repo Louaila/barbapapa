@@ -2,22 +2,26 @@
 
 namespace App\Controller;
 
-
+use App\Entity\Users;
+use App\Form\TableauBordType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Component\HttpFoundation\Request;
-use App\Form\TableauBordType;
-use App\Entity\Users;
-use Symfony\Component\Security\Core\Authentication\TokenStorageInterface;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use Doctrine\ORM\EntityManagerInterface;
 
 class UserController extends AbstractController
 {
-    /**
-     * @Route("/login", name="app_login")
-     */
+    private $entityManager;
+
+    public function __construct(EntityManagerInterface $manager, TokenStorageInterface $tokenStorage)
+    {
+        $this->entityManager = $manager;
+        $this->tokenStorage = $tokenStorage;
+    }
+    #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
         if ($this->getUser()) {
@@ -54,7 +58,6 @@ class UserController extends AbstractController
                 // Redirect to a success page or do any other action
                 return $this->redirectToRoute('app_updateUser');
             }
-
             return $this->render('security/tableauBord.html.twig', [
                 'updateForm' => $form->createView(),
             ]);
@@ -65,37 +68,33 @@ class UserController extends AbstractController
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
         return $this->redirectToRoute('app_login');
-
     }
 
     #[Route('/deleteUser/{id}', name: 'app_deleteUser')]
-    public function deleteUser(Request $request, int $id): Response
+    public function deleteUser(Request $request, $id): Response
     {
-        $entityManager = $this->getDoctrine()->getManager();
-        $user = $entityManager->getRepository(Users::class)->find($id);
-
+        $user = $this->entityManager->getRepository(Users::class)->find($id);
 
         if (!$user) {
             throw $this->createNotFoundException('User not found');
         }
-
         // Supprimer l'utilisateur
-        $entityManager->remove($user);
-        $entityManager->flush();
+        $this->entityManager->remove($user);
+        $this->entityManager->flush();
+        // Déconnexion de l'utilisateur
+        $this->tokenStorage->setToken(null);
 
         // Rediriger vers une page de confirmation ou ailleurs
-        return $this->redirectToRoute('app_login');
+        return $this->redirectToRoute('app_index');
     }
-
 
     #[Route(path: '/logout', name: 'app_logout')]
     public function logout(): void
     {
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
-        
-        
     }
-    
+
+
 }
 
 
