@@ -6,7 +6,9 @@
             <img src="{{ asset('/img/cisse.JPG')}}"alt="Photo User">
         </figure>
         <div>
-            <p>Cisse</p>
+            {% if app.user %}
+            <p>{{ app.user.nameUser }}</p>
+            {% endif  %}
         </div>
     </section>
     <section id="infoUser">
